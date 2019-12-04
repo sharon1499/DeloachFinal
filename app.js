@@ -12,15 +12,14 @@ var explanation = "";
 var url = "";
 
 app.get('/', function(req, res){
-    getData(true);
+    getData();
     res.render("index",{title:title, date:date, explanation:explanation, url:url});
 });
 
 function getData(){
-    //var info = "https://csuserversidewebdevfinal.herokuapp.com/";
     fetch("https://csuserversidewebdevfinal.herokuapp.com/")
         .then(res => res.json())
-        .then(json =>{
+        .then(json = {
             title = json.title;
             url = json.url;
             explanation = json.explanation;
