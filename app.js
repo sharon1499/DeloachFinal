@@ -12,7 +12,7 @@ var explanation = "";
 var url = "";
 
 app.get('/', function(req, res){
-    Info();
+    getData();
     res.render("index",{title:title, date:date, explanation:explanation, url:url});
 });
 
