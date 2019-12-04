@@ -27,7 +27,7 @@ function getData(){
         });
     }
 
-http.createServer(app).listen(port, function(){
+app.listen(port, function(){
 
 });
 
