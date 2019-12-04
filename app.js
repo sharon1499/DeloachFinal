@@ -19,10 +19,10 @@ app.get('/', function(req, res){
 function getData(){
     fetch("https://csuserversidewebdevfinal.herokuapp.com/")
         .then(res => res.json())
-        .then(json = {
+        .then(json => {
             title = json.title;
             url = json.url;
-            explanation = json.explanation;
+            explanation = "https://apod.nasa.gov/apod/image/1912/M94_Hubble_960.jpg";
             date = json.date;
         })
     };
