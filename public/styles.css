@@ -4,3 +4,9 @@
 .adjust-padding{
     padding-bottom: 30px;
 }
+.jumbotron{
+    color:blue;
+}
+body{
+    background-color:blue;
+}

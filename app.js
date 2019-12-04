@@ -22,11 +22,13 @@ function getData(){
         .then(json => {
             title = json.title;
             url = json.url;
-            explanation = "https://apod.nasa.gov/apod/image/1912/M94_Hubble_960.jpg";
+            explanation = json.explanation;
             date = json.date;
-        })
-    };
+        });
+    }
 
-app.listen(port, function(){
+http.createServer(app).listen(port, function(){
 
 });
+
+//http.createServer(app).listen(port, function()
