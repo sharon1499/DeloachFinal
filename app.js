@@ -16,9 +16,9 @@ app.get('/', function(req, res){
     res.render("index",{title:title, date:date, explanation:explanation, url:url});
 });
 
-function getData(guess){
-    var info = "https://csuserversidewebdevfinal.herokuapp.com/";
-    fetch(guess ? info)
+function getData(){
+    //var info = "https://csuserversidewebdevfinal.herokuapp.com/";
+    fetch("https://csuserversidewebdevfinal.herokuapp.com/")
         .then(res => res.json())
         .then(json =>{
             title = json.title;
