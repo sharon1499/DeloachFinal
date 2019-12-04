@@ -17,7 +17,7 @@ app.get('/', function(req, res){
 });
 
 function getData(){
-    fetch("https://csuserversidewebdevfinal.herokuapp.com/")
+    fetch("https://csuserversidewebdevfinal.herokuapp.com/"){
         .then(res => res.json())
         .then(json =>{
             title = json.title;
@@ -26,7 +26,7 @@ function getData(){
             date = json.date;
         })
     };
-
+}
 app.listen(port, function(){
 
 });
