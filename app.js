@@ -12,12 +12,13 @@ var explanation = "";
 var url = "";
 
 app.get('/', function(req, res){
-    getData();
+    getData(true);
     res.render("index",{title:title, date:date, explanation:explanation, url:url});
 });
 
-function getData(){
-    fetch("https://csuserversidewebdevfinal.herokuapp.com/"){
+function getData(guess){
+    var info = "https://csuserversidewebdevfinal.herokuapp.com/";
+    fetch(guess ? info)
         .then(res => res.json())
         .then(json =>{
             title = json.title;
@@ -26,7 +27,7 @@ function getData(){
             date = json.date;
         })
     };
-}
+
 app.listen(port, function(){
 
 });
