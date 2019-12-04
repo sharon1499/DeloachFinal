@@ -18,7 +18,7 @@ app.get('/', function(req, res){
 
 function getData(){
     fetch("https://csuserversidewebdevfinal.herokuapp.com/")
-        .then(res => json())
+        .then(res => res.json())
         .then(json =>{
             title = json.title;
             url = json.url;
