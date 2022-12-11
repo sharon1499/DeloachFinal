@@ -19,7 +19,7 @@
   "homepage": "https://github.com/sharon1499/DeloachFinal#readme",
   "dependencies": {
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "node-fetch": "^2.6.0"
   },
   "engines": {
